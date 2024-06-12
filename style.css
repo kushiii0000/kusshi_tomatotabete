@@ -1,0 +1,957 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Zen Maru Gothic", serif;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:#D63232;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   
+}
+.title {
+    font-family: "Cherry Bomb One", system-ui;
+    line-height:1.2em;
+    padding: 1.5%;
+    font-weight: 200;
+    color: #FFF1F1;
+    -webkit-text-stroke: 0.5px #ef2929;
+}
+.number {
+    font-size: 40px;
+    padding: 40px 60px;
+    padding-bottom: 0%;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.tips-box-1 {
+    display: none;
+    position: relative;
+    margin:auto;
+    align-items: center;
+    width: 700px;
+    height: 530px;
+    border-radius: 40px;
+    background: #FFF1F1;
+    z-index: 9; 
+    box-shadow: 6px 8px 0 rgba(97, 36, 36, 0.276);
+    color: #D63232;
+    
+}
+.inside-box {
+    width: fit-content;
+    height: fit-content;
+   margin: auto;
+}
+.img-1 {
+    margin: auto;
+    background-color: #FDCF01;
+    background-image: url(tomatoes-925698_1280.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
+.img-2 {
+    margin: auto;
+    background-color: #FDCF01;
+    background-size: cover;
+    background-image: url(tomatoes-3702962_1280.jpg);
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
+.img-3 {
+    margin: auto;
+    background-color: #FDCF01;
+    background-size: cover;
+    background-image: url(tomatoes-6122388_1280.jpg);
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
+.tips {
+   text-align: center;
+   padding-top: 65px;
+   font-size: 24px;
+   letter-spacing: 0.2em;
+    line-height:1.2em;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #f8baba;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #D50E0E;
+}
+
+.cercle-big{
+    position: absolute;
+    top: -30vh;
+    left:40vw;
+    border-radius: 600px;
+    border:30px solid rgba(255, 255, 255, 0.677);
+    width: 600px;
+    height: 600px;
+    z-index: 1;
+    
+}
+.cercle-small{
+    position: absolute;
+    top: 30vh;
+    border-radius: 500px;
+    border:30px solid rgba(255, 255, 255, 0.677);
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+   
+}
+.cercle-mid{
+    position: absolute;
+    top: 70vh;
+    left:59vw;
+    border-radius: 550px;
+    border:30px solid rgba(255, 255, 255, 0.677);
+    width: 550px;
+    height: 550px;
+    z-index: 1;
+}
+.menu-panel {
+    padding-top: 4vh;
+    margin-top: 4vh;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+
+
+
+/*メニューパネルを作る、要素↓*/
+.panel-01, .panel-02, .panel-03 {
+   height: 98vh;
+   width: 98vw;
+   display: flex;
+   flex-wrap: wrap;
+   position:absolute;
+}
+.panel-01{
+    z-index: -1;
+    left: 8vw;
+
+}
+.panel-02 {
+    z-index: -2;
+    left: 5vw;
+    margin-top:10vh;
+}
+.panel-03 {
+    z-index: -3;
+    margin-left: 2vh;
+    margin-top:20vh;
+}
+
+/*メニューパネルを作る、子要素４つ↓*/
+.menu-message, .menu-nutrition, .menu-sort, .menu-recipe {
+    height: calc(50% + 4px);
+    width: calc(50% + 4px);
+    margin: -2px;
+    border: 3px solid #310B0B;
+    border-radius: 40px;
+    background-color: #EFA8A8;
+    display: flex;
+    flex-direction: column;
+    color: #310B0B;
+    padding:70px;
+}
+
+.btn-1, .btn-2, .btn-3, .btn-4 {
+    display: inline-block;
+    width: 230px;
+    position: absolute;
+    text-align: center;
+    padding: 0.7em 2em;
+    background-color: #D63232; /* 背景色 */
+    box-shadow: 0 5px 0 #310B0B; /* 影の太さ・色 */
+    border-radius: 60px;
+    color: #fff;
+    text-decoration: none; /* 文字の下線を消す */
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.menu-message h1 {
+    color: #310B0B;
+}
+
+.menu-message {
+    position: relative;
+}
+
+.btn-1 {
+    top: 230px;
+    left:300px;
+}
+
+.menu-nutrition {
+    position:relative;
+}
+.btn-2{
+    top: 230px;
+    left:290px;
+   
+}
+.menu-sort{
+    position: relative;
+}
+
+.btn-3{
+    top: 230px;
+    left:300px;
+   
+}
+.menu-recipe{
+    position:relative;
+}
+
+.btn-4{
+    top: 230px;
+    left:290px;
+}
+
+
+
+
+
+
+.btn-3:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+
+.btn-3:active {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+
+
+
+
+/*メッセージ 親要素*/
+.message {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #EFA8A8;
+}
+
+.title-message h1, .title-nutrition, .title-sort, .title-recipe {
+    right: 100px;
+    top: 100px;
+    width: 240px;
+    text-align: center;
+    padding: 0.1em 0.1em;
+    background-color: #D63232; /* 背景色 */
+    box-shadow: 0 5px 0 #310B0B; /* 影の太さ・色 */
+    border-radius: 60px;
+    color: #fff;
+    text-decoration: none; /* 文字の下線を消す */
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left:80px;
+
+
+}
+.message a {
+    color:#310B0B;
+}
+
+/*メッセージ 親要素*/
+.wrapper {
+    display: flex;
+    justify-content: flex-end;
+    color: #D63232;
+    z-index: 1;
+    padding-right: 80px;
+    padding-left:80px;
+    padding-top:50px ;
+}
+
+.wrapper-1 {
+    display: flex;
+    justify-content: flex-end;
+    color: #D63232;
+    z-index: 1;
+    padding-right: 80px;
+    padding-left:80px;
+    padding-bottom:190px;
+}
+.item1 {
+    height: 45vh;
+    width: 125vw;
+    background-color: #fff;
+}
+.item2 {
+    background-image: url(tomato-1694089_1280.jpg);
+    background-position: center center;
+    height: 45vh;
+    width: 65vw;
+}
+
+.item3 { 
+    height:45vh;
+    width: 80vw;
+    background-image: url(tomatoes-1703968_1280.jpg);
+    background-position: center center;
+}
+
+.item4 {
+    height: 45vh;
+    width: 75vw;
+    background-color: #fff;
+}
+
+.item1, .item2, .item3, .item4 {
+    border-radius: 20px;
+    border: 3px solid #310B0B;
+    margin-bottom:-3px;
+    margin-right:-3px;
+    background-size: cover;
+    box-shadow:6px 5px 0px -2px #310B0B;
+}
+
+.item1 h1 {
+    padding:7%;
+    padding-bottom:6%;
+    letter-spacing: 0.3em;
+    word-break: break-word;
+}
+.item1 p {
+    padding-left:7%;
+    letter-spacing: 0.3em;
+    word-break: break-word;
+}
+
+.item4 h1 {
+    padding:8%;
+    letter-spacing: 0.3em;
+    word-break: break-word;
+}
+.item4 p {
+    padding-left:8%;
+    letter-spacing: 0.3em;
+    word-break: break-word;
+}
+
+/*栄養01-06*/
+.nutrition {
+    height: inherit;
+    position: relative;
+    background-color: #FFF1F1;
+    overflow: hidden;
+}
+
+.nutrition-00{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    padding-bottom:190px;
+}
+/*
+.title-nutrition {
+    color:#310B0B;
+    font-size: 36px;
+    padding-top:80px;
+    padding-left:80px;
+}*/
+
+.nutrition-000 {
+    padding: 22px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.nutrition-01 {
+    font-weight: 300;
+   width:314px;
+   height: 50px;
+    border: 3px solid #310B0B;
+    margin-left:-3px;
+    margin-top:-3px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    background-color:#D63232;
+}
+
+.nutrition-02,.nutrition-09,.nutrition-05,.nutrition-06,.nutrition-07,.nutrition-08{
+    width:314px;
+    height:203px;
+    border: 3px solid #310B0B;
+    margin-left:-3px;
+    margin-top:-3px;
+    border-radius: 15px;
+    z-index: -1;
+    background-size: cover;
+}
+.nutrition-02{
+    background-image: url(food-3233583_1280.jpg);
+}
+
+.nutrition-09{
+    background-image: url(tomato-1492144_1280.jpg);
+}
+.nutrition-05{
+    background-image: url(tomatoes-1569280_1280.jpg);
+}
+.nutrition-06{
+    background-image: url(tomatoes-1114066_1280.jpg);
+}
+.nutrition-07{
+    background-image: url(tomato-plant-4487969_1280.jpg);
+}
+.nutrition-08{
+    background-image: url(tomatoes-1561565_1280.jpg);
+}
+.nutrition-01 h2{
+    padding-right: 15px;
+    font-size: 27px;
+    letter-spacing: 0.1em;
+    color: #fff;
+
+}
+
+.nutrition-03 {
+    width:312px;
+    height:248px;
+    border: 3px solid #310B0B;
+    color: #D63232;
+    margin-top:-3px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 15px;
+    text-orientation: upright;
+    padding-top: 5px;
+    background-color: #fff;
+}
+
+.nutrition-03 p {
+    writing-mode: vertical-rl;
+    padding: 30px;
+    margin:0 10px;
+    line-height: 2.7em;
+    letter-spacing: 0.2em;
+    font-weight: 560;
+    font-family: "Inter", sans-serif;
+}
+.nutrition-04 {
+    border: 3px solid #310B0B;
+    margin-left:-3px;
+    margin-top:-3px;
+    border-radius: 15px;
+    z-index: 4;
+    position: absolute;
+    top: 225px;
+    left:10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #fff;
+}
+.nutrition-04 h3 {
+    padding-top: 10px;
+    margin:10px 10px;
+    font-size: 1.5em;
+    letter-spacing: 0.7em;
+    color: #D63232;
+}
+
+.wrapper-special{
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    border: 1px solid #ddd;
+    margin-inline: auto;
+  }
+  .loop {
+    animation: loop 15s linear infinite;
+    animation-play-state: running;
+    width: 100%;
+  }
+  .loop2{
+    position: absolute;
+    top: 0; left: 0;
+    animation: loop 15s -5s linear infinite;
+    animation-play-state: running;
+  }
+  
+  @keyframes loop {
+    0%{
+      transform: translateX(100%);
+    }
+
+    50%{
+        transform: translateX(0%);
+      }
+   
+    100%{
+        transform: translateX(-100%);
+    }
+  }
+
+
+
+/*種類*/
+.sort {
+    width: 100vw;
+    padding-bottom:190px;
+    background-color: #EFA8A8;
+    overflow: hidden;
+}
+/*
+.title-sort {
+ font-size: 36px;
+}/*
+
+/*生食用のボックス*/
+.sort-box-01 {
+    display: flex; 
+     width: 100%;
+     scrollbar-width: none;
+     overflow-x:hidden;
+     overflow-y: hidden;
+     height: 100%;
+     padding: 30px;
+     padding-top:60px;
+     color: #D50E0E;
+     justify-content: center;
+}
+
+/*全体の親要素*/
+.sort-000 {
+    width:314px;
+    border-radius: 15px;
+    position: relative;
+    margin:20px;
+}
+
+.sort-1,.sort-2,.sort-3,.sort-4,.sort-5,.sort-6,.sort-7,.sort-8,.sort-9,.sort-10  {
+    width:314px;
+    border: 3px solid #310B0B;
+    margin-top:-3px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.sort-1 {
+    padding-left: 15px;
+    padding-top:2px;
+    height:50px;
+    font-size: 1.1em;
+    
+}
+.sort-2 {
+   height: 53px;
+}
+
+.sort-2 p{
+    margin-left: 15px;
+    margin-top: 9px;
+    font-size: 1em;
+    font-weight: 500;
+}
+.sort-3,.sort-6,.sort-7,.sort-8,.sort-9,.sort-10 {
+    height: 240px;
+    background-size: cover;
+}
+.sort-6 {
+    background-image: url(tomato-1310961_1280.jpg);
+}
+.sort-3{
+    
+    background-image: url(salad-5904093_1280.jpg);
+}
+.sort-7{
+    background-image: url(tomatoes-6122388_1280.jpg);
+}
+.sort-8{
+    background-image: url(tomatosoup-482403_1280.jpg);
+}
+    
+.sort-9{
+   
+    background-image: url(tomatoes-7414760_1280.jpg);
+}
+.sort-10{
+  
+    background-image: url(tomatoes-3702962_1280.jpg);
+}
+.sort-4 p {
+    height:248px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 30px;
+    margin:0 20px;
+    line-height: 2.7em;
+    letter-spacing: 0.2em;
+    font-family: "Inter", sans-serif;
+}
+
+.sort-4 {
+    display: flex;
+    align-items: center;
+}
+
+.sort-5 {
+    writing-mode: vertical-rl;
+    width: auto;
+    position: absolute;
+    top:235px;
+    left: 258px;
+    padding: 10px;
+    font-size: 1.5em;
+    letter-spacing: 0.7em;
+    background-color: #FFF1F1;
+    border-radius: 15px;
+     padding-top:15px;
+}
+
+/*影の部分
+.sort-1-1, .sort-2-1,.sort-3-1,.sort-4-1,.sort-5-1 {
+    position: absolute;
+    width:250px;
+    z-index: -1;
+    border-radius: 15px;
+    background-color: #981515;
+    left:44px;
+}
+
+影の部分
+.sort-1-1 {
+    height: 10%;
+    top:5%;
+}
+
+.sort-2-1 {
+    height: 53px;
+    top:60px;
+}
+
+.sort-3-1 {
+    height: 230px;
+    top:112px;
+}
+
+.sort-4-1 {
+    height: 260px;
+    top:341px;
+}*/
+
+
+.recipe {
+    height: inherit;
+    padding-bottom:190px;
+    overflow: hidden;
+}/*
+.title-recipe {
+    color:#310B0B;
+    font-size: 36px;
+    padding-top:80px;
+    padding-left:80px;
+    padding-bottom:80px;
+   
+}*/
+.recipe-000 {
+    position: relative;
+    width: 341px;
+}
+.recipe-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 30px;
+   margin-top: 80px;
+   
+}
+.recipe-box-0 {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.recipe-1,.recipe-2,.recipe-3,.recipe-4,.recipe-5,.recipe-5-1,.recipe-5-2,.recipe-5-3 {
+    border:3px solid #310B0B;
+    border-radius: 15px;
+    margin-bottom: -3px;
+    padding-left:10px;
+    display: flex;
+    align-items: center;
+}
+
+.recipe-1 {
+ background-color: #D50E0E;
+ width:240px;
+ height: 50px;
+ color:white;
+ font-size: 24px;
+ margin-right: -3px;
+}
+
+.recipe-2 {
+    height: 50px;
+    width: 105px;
+    background:#FFF;
+   }
+   .recipe-2 h4 {
+    color:#D50E0E;
+    font-size: 24px;
+    padding: 14px;
+    font-family: "Caveat", cursive;
+   }
+.recipe-3 { 
+    height: 80px;
+    width: 341px;
+    font-size: 14px;
+    background-color: #D50E0E;
+    color:white;
+}
+.recipe-4 {
+    height: 74px;
+    width: 341px;
+    font-size: 14px; 
+    color: #D50E0E;
+}
+.recipe-5 {
+    width: 341px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+}
+
+.recipe-5-1 {
+height: 374px;
+width: 281px;
+background-image: url(IMG_2181.jpg);
+padding-left: 0px;
+background-size:cover;
+background-position: center center;
+}
+
+.recipe-5-2 {
+    height: 374px;
+    width: 281px;
+    background-image: url(IMG_2177.jpg);
+    padding-left: 0px;
+    background-size:cover;
+    background-position: center center;
+}
+
+.recipe-5-3 {
+    height: 374px;
+    width: 281px;
+    background-image: url(IMG_2180.jpg);
+    padding-left: 0px;
+    background-size:cover;
+    background-position: center center;
+}
+
+.recipe-6 {
+    height: 115px;
+    width:115px;
+    border-radius: 100px;
+    background-color: #FDCF01;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding:10px;
+    padding:0;
+}
+
+.recipe-6 p {
+   text-align: center;
+}
+
+.footer {
+    height: 100vh;
+    background-color:#EFA8A8;
+    position: relative;
+}
+.footer h1{
+    position: absolute;
+    z-index: 8;
+    top: 200px;
+    left:850px ;
+    font-size: 48px;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #FFF1F1;
+    text-shadow:5px 4px 1px #310B0B;
+}
+.footer-box {
+    height:100vh;
+    width: 100vw;
+    background-image: url(tomatoes-3480643_1280.png);
+}
+
+
+
+@media (max-width: 425px) {
+.tips-box-1{
+    width:auto;
+    margin: 3%;
+}
+.tips {
+    font-size: 20px;
+}
+    .menu-panel{
+        display:none;
+    }
+    .menu-panel-sp {
+        display:block;
+    }
+.CSSMarquee p{
+    padding-top:60px;
+}
+    .panel-01,.panel-02,.panel-03 {
+                height: 98vh;
+                width: 100vw;
+                flex-wrap: nowrap;
+                flex-direction: column;
+       }
+
+       .menu-message, .menu-nutrition, .menu-sort, .menu-recipe {
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        margin: -2px;
+        border: 3px solid #310B0B;
+        border-radius: 40px;
+        background-color: #EFA8A8;
+        display: flex;
+    }
+
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+
+    .wrapper-1 {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .item1 {
+        width: 90vw;
+        height: 400px;
+        border: 3px solid #310B0B;
+        border-radius:15px;
+    }
+
+    .item2 {
+    background-size: cover;
+    background-position: center center;
+    width: 90vw;
+    }
+
+    .item3 {
+        width: 90vw;
+        background-size: cover;
+        background-position: center center;
+    }
+    .item4{
+        width: 90vw;
+        height: 370px;
+    }
+
+    .nutrition-000{
+    width: 90vw;
+    }
+
+    .sort-box-01{
+        overflow-x: scroll;
+    }
+    .sort-1,.sort-2,.sort-3,.sort-4,.sort-6,.sort-7,.sort-8,.sort-9,.sort-10 {
+        width: 280px;
+    }
+    .sort-3,.sort-4,.sort-6,.sort-7,.sort-8,.sort-9,.sort-10{
+        height: 200px;
+    }
+   
+.sort-4 p {
+    height: fit-content;
+    font-size: 14px;
+    writing-mode:unset;
+    padding:0;
+}
+
+.sort-box-01{
+ width:100%;
+ overflow: scroll;
+ justify-content: unset;
+}
+
+.sort-5 {
+    writing-mode:unset;
+    left:-13px;
+    top:270px;
+    font-size: 16px;
+    padding: 6px;
+     padding-left: 15px;
+}
+
+.recipe-000{
+    width:auto;
+}
+
+    .recipe-box {
+        flex-direction: column;
+        row-gap: 80px;
+       justify-content: center;
+       margin-top: 60px;
+    }
+    .recipe-6{
+        left: 60vw;
+    }
+    .footer h1 {
+        left:180px ;
+        font-size: 28px;
+        font-family: "Cherry Bomb One", system-ui;
+        color: #FFF1F1;
+        text-shadow:5px 4px 1px #310B0B;
+    }
+}

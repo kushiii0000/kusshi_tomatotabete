@@ -1,12 +1,511 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tomatotabete</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tomatotabete</title>
+        <link rel="stylesheet" href="slick.css">
+        <link rel="stylesheet" href="slick-theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    </head>
 <body>
+   
+    <header>
+        <h1 class="title">Let's eat! <br>Let's be cute!</h1>
+        <div class="slideshow-container">
+            <div class="tips-box-1">
+                <h1 class="number">01</h1>
+                <div class="inside-box">
+                    <div class="img-1"></div>
+                    <h1 class="tips">旨み引き出すグルタミン酸！<br>トマトで減塩始めちゃう？</h1>
+                </div>
+            </div>
+            <div class="tips-box-1">
+                <h1 class="number">02</h1>
+                <div class="inside-box">
+                    <div class="img-2"></div>
+                    <h1 class="tips">魚や肉の臭み消し！<br>食べやすさ＋栄養満点？</h1>
+                </div>
+            </div>
+            <div class="tips-box-1">
+                <h1 class="number">03</h1>
+                <div class="inside-box">
+                    <div class="img-3"></div>
+                    <h1 class="tips">食べ合わせは無限大！<br>食べれるレシピを見つけよう！</h1>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="cercle-big"></div>
+        <div class="cercle-small"></div>
+        <div class="cercle-mid"></div>
+    </header>
+    <script src="script.js"></script>
     
+
+    <section class="menu-panel">
+        <style type="text/css">
+            .CSSMarquee {
+                max-width:100vw;
+                padding: 1%;
+                margin: 0 ;
+                position: relative;
+                overflow: hidden;
+                font-size: 24px;
+                /*border-top: 1px solid #D50E0E;
+                border-bottom: 1px solid #D50E0E;*/
+                color:#D50E0E;
+                font-weight: bold;
+            }
+            .CSSMarquee p:after {
+                content: "";
+                white-space: nowrap;
+            }
+            .CSSMarquee p {
+                margin: 0;
+                padding-left: 100%;
+                display: inline-block;
+                white-space: nowrap;
+                -webkit-animation-name:marqueeRL;
+                -webkit-animation-timing-function:linear;
+                -webkit-animation-duration:20s;
+                -webkit-animation-iteration-count:infinite;
+                -moz-animation-name:marqueeRL;
+                -moz-animation-timing-function:linear;
+                -moz-animation-duration:20s;
+                -moz-animation-iteration-count:infinite;
+                -ms-animation-name:marqueeRL;
+                -ms-animation-timing-function:linear;
+                -ms-animation-duration:20s;
+                -ms-animation-iteration-count:infinite;
+                -o-animation-name:marqueeRL;
+                -o-animation-timing-function:linear;
+                -o-animation-duration:20s;
+                -o-animation-iteration-count:infinite;
+                animation-name:marqueeRL;
+                animation-timing-function:linear;
+                animation-duration:20s;
+                animation-iteration-count:infinite;
+                animation-play-state: running;
+                animation: marqueeRL 20s linear infinite;
+            }
+   
+            @-webkit-keyframes marqueeRL {
+                from {-webkit-transform:translate(0);} to{-o-transform:translate(50%);}to {-webkit-transform:translate(-100%);}
+            }
+    
+            @-moz-keyframes marqueeRL {
+                from {-moz-transform:translate(0);} to {-o-transform:translate(50%);} to {-moz-transform:translate(-100%);}
+            }
+            @-ms-keyframes marqueeRL {
+                from {-ms-transform:translate(0);} to {-o-transform:translate(50%);} to {-ms-transform:translate(-100%);}
+            }
+            @-o-keyframes marqueeRL {
+                from {-o-transform:translate(0);} to {-o-transform:translate(50%);} to {-o-transform:translate(-100%);}
+            }
+            @keyframes marqueeRL {
+                from {transform:translate(0);} to {-o-transform:translate(50%);} to {transform:translate(-100%);}
+            }
+            
+            </style>
+           <!---<div class="CSSMarquee"><p>トマトの栄養素をご紹介！　美容と健康に必要な栄養素がたくさん！　中でもリコピンはトマトの赤を象徴する、最高の栄養素！</p> --> 
+             </div>
+        <div class="panel-01">
+             <div class="menu-message">
+              <h1>日頃のご飯で「栄養満点」って難しい。<br>
+                  でも、健康も美容のためにも...</h1>
+                  <a href="#message-btn" class="btn-1">メッセージ▼</a>
+
+             </div>
+            <div class="menu-nutrition">
+                <h1>優秀な野菜、トマトの栄養を知って<br>
+                 美容と健康の知識を増やそう！</h1>
+                 <a href="#nutrition-btn" class="btn-2">栄養▼</a>
+            </div>
+             <div class="menu-sort">
+                     <h1>トマトには生食用と加工用の２種類がある。<br>
+                           その違いを食べ方、栽培方法、栄養価<br>
+                            で見よう！</h1>
+                        <a href="#sort-btn" class="btn-3">種類▼</a>
+            </div>
+            <div class="menu-recipe">
+                <h1>誰でもトマトを美味しく食べれるように。<br>
+                  今からでも作れるレシピを紹介。</h1>
+                 <a href="#recipe-btn" class="btn-4">レシピ紹介▼</a>
+            </div>
+        </div>
+
+        <!--重なっている1枚目-->
+        <div class="panel-02">
+            <div class="menu-message"></div>
+            <div class="menu-nutrition"></div>
+             <div class="menu-sort"></div>
+             <div class="menu-recipe"></div>
+        </div>
+        <!--重なっている1枚目-->
+
+        <!--重なっている2枚目-->
+        <div class="panel-03">
+         <div class="menu-message"></div>
+        <div class="menu-nutrition"></div>
+        <div class="menu-sort"> </div>
+        <div class="menu-recipe"></div>
+        </div>
+    <!--重なっている2枚目-->
+
+
+    </section>
+
+    <section class="message" id="message-btn">
+        
+      <div class="title-message"><h1>メッセージ</h1></div>
+      <div class="CSSMarquee"><p>栄養難民はトマトたべ！　　　一緒に医者を青くしよう！　　もうトマト食ってりゃええねん！ 　一緒に可愛くなっちゃおう！</p>
+      </div>
+        <div class="wrapper">
+            <div class="item1">
+                <h1>日頃の食事で「栄養満点」って難しい。<br>
+                    でも、健康や美容のためにも気をつけたい。</h1>
+                <p>
+                    献立作り？ サプリメント？ たくさんの野菜かな...？<br>
+                    でも、ご飯作るのは面倒だし、お金はかけたくない。<br>
+                    んーもう！どうしよう！わからない！！
+                </p></div>
+            <div class="item2"></div>
+        </div>
+
+        <div class="wrapper-1">
+            <div class="item3"></div>
+            <div class="item4"> 
+                <h1>トマト食ってりゃええねん！</h1>
+                <p>トマトは低カロリーながらも<br>
+                    たくさんの栄養素を取れてしまう優秀野菜！<br>
+                    トマトがたとえ嫌いでも、克服しようとする<br>
+                    のではなく、食べられる方法を見つけて、<br>
+                    味方にしちゃおう！</p></div>
+        </div>
+        
+
+        
+    </section>
+
+    <section class="nutrition" id="nutrition-btn">
+        <h1 class="title-nutrition">栄養</h1>
+      
+            <div class="CSSMarquee"><p>トマトの栄養素をご紹介！　美容と健康に必要な栄養素がたくさん！　中でもリコピンはトマトの赤を象徴する、最高の栄養素！</p>
+            </div>
+        <div class="nutrition-00">
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>01</h2></div>
+            <div class="nutrition-02"></div>
+            <div class="nutrition-03">
+                <p>食べて補う栄養素<br>
+                    強い抗酸化力を持ち<br>
+                    お肌のシミやしわを<br>
+                    予防する
+                </p></div>
+            <div class="nutrition-04"><h3>リコピン</h3></div>
+        </div>
+
+
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>02</h2></div>
+            <div class="nutrition-09"></div>
+            <div class="nutrition-03">
+                <p>体内でビタミンAに<br>
+                    変換される<br>
+                    視力低下を防ぎ<br>
+                    体の免疫を強くする
+                </p></div>
+            <div class="nutrition-04"><h3>βカロテン</h3></div>
+        </div>
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>03</h2></div>
+            <div class="nutrition-05"></div>
+            <div class="nutrition-03">
+                <p>コラーゲン合成に<br>
+                    必要な栄養素<br>
+                    メラニン生成を抑え<br>
+                    美肌効果がある
+                </p></div>
+            <div class="nutrition-04"><h3>ビタミンC</h3></div>
+        </div>
+<!--
+        <div class="wrapper-special">
+            <p class="loop">トマトの栄養素をご紹介！　美容と健康に必要な栄養素がたくさん！　中でもリコピンはトマトの赤を象徴する、最高の栄養素！</p>
+            <p class="loop loop2">トマトの栄養素をご紹介！　美容と健康に必要な栄養素がたくさん！　中でもリコピンはトマトの赤を象徴する、最高の栄養素！</p>
+          </div>
+        -->
+          
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>04</h2></div>
+            <div class="nutrition-06"></div>
+            <div class="nutrition-03">
+                <p>取りすぎた塩分を<br>
+                    尿として排泄する<br>
+                    むくみ予防に<br>
+                    効果がある
+                </p></div>
+            <div class="nutrition-04"><h3>カリウム</h3></div>
+        </div>
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>05</h2></div>
+            <div class="nutrition-07"></div>
+            <div class="nutrition-03">
+                <p>腸内環境を整える<br>
+                    水溶性食物繊維と<br>
+                    不溶性食物繊維の<br>
+                    両方がある
+                </p></div>
+            <div class="nutrition-04"><h3>食物繊維</h3></div>
+        </div>
+        <div class="nutrition-000">
+            <div class="nutrition-01"><h2>06</h2></div>
+            <div class="nutrition-08"></div>
+            <div class="nutrition-03">
+                <p>神経の興奮を抑え<br>
+                    一時的に疲労感や<br>
+                    ストレスを緩和する<br>
+                    はたらきがある
+                </p></div>
+            <div class="nutrition-04"><h3>GABA</h3></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="sort" id="sort-btn">
+        <h1 class="title-sort">種類</h1>
+        <div class="CSSMarquee"><p>トマトには生食用トマトと加工用トマトの２種類がある。　世界ではトマトは調理されるのが一般的。　あなたが好きな食べ方はどっち？</p>
+        </div>
+    
+        
+        <div class="sort-box-01">
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>生食用</h2>
+           
+            </div>
+            <div class="sort-2">
+                <p>#サラダや食事の彩りに</p>
+               
+            </div>
+            <div class="sort-3">
+               
+            </div>
+            <div class="sort-4">
+                <p>熱に弱いビタミンCは生で、油と一緒に食べるとリコピン摂取効率UP！</p>
+                
+            </div>
+            <div class="sort-5"><h3>食べ方</h3></div>
+
+            <div class="sort-1-1"></div>
+            <div class="sort-2-1"></div>
+            <div class="sort-3-1"></div>
+            <div class="sort-4-1"></div>
+        </div>
+        
+<!---->
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>生食用</h2>
+                <div class="sort-1-1"></div>
+            </div>
+            <div class="sort-2">
+                <p>#ビニールハウス栽培</p>
+                <div class="sort-2-1"></div>
+            </div>
+            <div class="sort-6">
+                <div class="sort-3-1"></div>
+            </div>
+            <div class="sort-4">
+                <p>年中野菜は細かい管理で育てられる。青い状態のまま出荷される。</p>
+                <div class="sort-4-1"></div>
+            </div>
+            <div class="sort-5"><h3>栽培方法</h3></div>
+        </div>
+
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>生食用</h2>
+                <div class="sort-1-1"></div>
+            </div>
+            <div class="sort-2">
+                <p>#ビタミンCがいっぱい</p>
+                <div class="sort-2-1"></div>
+            </div>
+            <div class="sort-7">
+                <div class="sort-3-1"></div>
+            </div>
+            <div class="sort-4">
+                <p>生はビタミンCが豊富。大玉よりもミニトマトの方が栄養が高い。</p>
+                <div class="sort-4-1"></div>
+            </div>
+            <div class="sort-5"><h3>栄養価</h3></div>
+        </div>
+    </div>
+
+    <div class="sort-box-01">
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>加工用</h2>
+           
+            </div>
+            <div class="sort-2">
+                <p>#サラダや食事の彩りに</p>
+               
+            </div>
+            <div class="sort-8">
+               
+            </div>
+            <div class="sort-4">
+                <p>世界ではトマトは調理して食べられるのが一般的。加工品でも栄養は高い。</p>
+                <div class="sort-5"><h3>食べ方</h3></div>
+            </div>
+            <!--
+           
+            <div class="box-shadow-01">
+                <div class="sort-1-1"></div>
+                <div class="sort-2-1"></div>
+                <div class="sort-3-1"></div>
+                <div class="sort-4-1"></div>
+            </div>-->
+        </div>
+
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>加工用</h2>
+                <div class="sort-1-1"></div>
+            </div>
+            <div class="sort-2">
+                <p>#太陽の恵いっぱい</p>
+                <div class="sort-2-1"></div>
+            </div>
+            <div class="sort-9">
+                <div class="sort-3-1"></div>
+            </div>
+            <div class="sort-4">
+                <p>屋外で育たられ、完熟してから出荷される。断面図もかなり違う</p>
+                <div class="sort-4-1"></div>
+            </div>
+            <div class="sort-5"><h3>栽培方法</h3></div>
+        </div>
+
+        <div class="sort-000">
+            <div class="sort-1">
+                <h2>加工用</h2>
+                <div class="sort-1-1"></div>
+            </div>
+            <div class="sort-2">
+                <p>#加工用トマトってすごい！</p>
+                <div class="sort-2-1"></div>
+            </div>
+            <div class="sort-10">
+                <div class="sort-3-1"></div>
+            </div>
+            <div class="sort-4">
+                <p>加工用は、リコピンが3倍、βカロテンやビタミンCが2倍と高栄養！
+                </p>
+                <div class="sort-4-1"></div>
+            </div>
+            <div class="sort-5"><h3>栄養価</h3></div>
+        </div>
+    </div>
+    </section>
+    
+    <section class="recipe" id="recipe-btn">
+        <h1 class="title-recipe">レシピ紹介</h1>
+        <div class="CSSMarquee"><p>誰でも作れるレシピを紹介！　どんなズボラさんも歓迎します！　今日、トマト食べてみない？　美味しく食べて、可愛くなろう！</p>
+        </div>
+        <div class="recipe-box">
+    <div class="recipe-000">
+    <div class="recipe-box-0">
+        <div class="recipe-1"><p>皮の剥き方</p></div>
+        <div class="recipe-2"><h4>No.01</h4></div>
+    </div>
+
+    <div class="recipe-3">
+        <p>トマトのヘタの剥き方を紹介。<br>
+            簡単に皮が剥ける。固い皮はこれでおさらばだ！</p>
+    </div>
+    <div class="recipe-4">
+        <h3>＃皮嫌い<br>
+            ＃皮が固くて包丁入らない</h3>
+    </div>
+    <div class="recipe-5">
+        <div class="recipe-5-1"></div>
+    </div>
+    <div class="recipe-6">
+        <p>レシピ<br>
+            動画を<br>
+            見る→</p>
+    </div>
+    </div>
+    <div class="recipe-000">
+        <div class="recipe-box-0">
+            <div class="recipe-1"><p>トマトパスタ</p></div>
+            <div class="recipe-2"><h4>No.02</h4></div>
+        </div>
+    
+        <div class="recipe-3">
+            <p>時短で栄養満点！虚無トマトパスタ！<br>
+                疲れても作るか！って思える気軽さ◎</p>
+        
+        </div>
+        <div class="recipe-4">
+            <h3>＃トマト缶で、コスパ最強？<br>
+                ＃時短でトマト？
+            </h3>
+        </div>
+        <div class="recipe-5">
+            <div class="recipe-5-2"></div>
+        </div>
+        <div class="recipe-6">
+            <p>レシピ<br>
+                動画を<br>
+                見る→</p>
+        </div>
+        </div>
+        <div class="recipe-000">
+            <div class="recipe-box-0">
+                <div class="recipe-1"><p>ミネストローネ</p></div>
+                <div class="recipe-2"><h4>No.03</h4></div>
+            </div>
+        
+            <div class="recipe-3">
+                <p>野菜たっぷりのスープ<br>
+                    トマト缶を使用したレシピ。冷凍保存OK。</p>
+            </div>
+            <div class="recipe-4">
+                <h3>#野菜もりもり！<br>
+                    ＃トマト缶で、コスパ最強？</h3>
+            </div>
+            <div class="recipe-5">
+                <div class="recipe-5-3"></div>
+            </div>
+            <div class="recipe-6">
+                <p>レシピ<br>
+                    動画を<br>
+                    見る→</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <h1>Let'eat! <br>
+            Let's be cute!
+         </h1>
+       <div class="footer-box"> </div>
+    </section>
+
 </body>
+
 </html>
