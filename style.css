@@ -148,10 +148,6 @@ header {
     overflow: hidden;
 }
 
-
-
-
-
 /*メニューパネルを作る、要素↓*/
 .panel-01, .panel-02, .panel-03 {
    height: 98vh;
@@ -161,9 +157,7 @@ header {
    position:absolute;
 }
 .panel-01{
-    z-index: -1;
     left: 8vw;
-
 }
 .panel-02 {
     z-index: -2;
@@ -203,6 +197,7 @@ header {
     text-decoration: none; /* 文字の下線を消す */
     font-weight: 500;
     font-size: 20px;
+    z-index: 99;
 }
 
 .menu-message h1 {
@@ -219,7 +214,7 @@ header {
 }
 
 .menu-nutrition {
-    position:relative;
+    position: relative;
 }
 .btn-2{
     top: 230px;
@@ -249,12 +244,12 @@ header {
 
 
 
-.btn-3:hover {
+.btn-1:hover,.btn-2:hover,.btn-3:hover,.btn-4:hover {
     box-shadow: none;
     transform: translateY(5px);
   }
 
-.btn-3:active {
+.btn-1:active,.btn-2:active,.btn-3:active,.btn-4:active {
     box-shadow: none;
     transform: translateY(5px);
   }
