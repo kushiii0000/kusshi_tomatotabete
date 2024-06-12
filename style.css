@@ -777,11 +777,12 @@ background-position: center center;
     background-position: center center;
 }
 
-.recipe-6 {
+.recipe-6 a {
     height: 115px;
     width:115px;
     border-radius: 100px;
     background-color: #FDCF01;
+    box-shadow:0 5px 0 #310B0B;
     color: #fff;
     position: absolute;
     bottom: 20px;
@@ -792,12 +793,19 @@ background-position: center center;
     align-items: center;
     padding:10px;
     padding:0;
+    text-decoration: none;
+    text-align: center;
 }
 
-.recipe-6 p {
-   text-align: center;
+.recipe-6 a:hover {
+  box-shadow: none;
+  transform:translateY(5px);
 }
 
+.recipe-6 a:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
 .footer {
     height: 100vh;
     background-color:#EFA8A8;
