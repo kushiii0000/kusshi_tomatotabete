@@ -15,10 +15,11 @@ header {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-   
 }
+
 .title {
     font-family: "Cherry Bomb One", system-ui;
+    font-size: 2em;
     line-height:1.2em;
     padding: 1.5%;
     font-weight: 200;
@@ -40,8 +41,7 @@ header {
     position: relative;
     margin:auto;
     align-items: center;
-    width: 700px;
-    height: 530px;
+    width: 60vw;
     border-radius: 40px;
     background: #FFF1F1;
     z-index: 9; 
@@ -51,7 +51,7 @@ header {
 }
 .inside-box {
     width: fit-content;
-    height: fit-content;
+    height: inherit;
    margin: auto;
 }
 .img-1 {
@@ -82,8 +82,10 @@ header {
     border-radius: 250px;
 }
 .tips {
+    display: inline-block;
    text-align: center;
    padding-top: 65px;
+   padding-bottom:13%;
    font-size: 24px;
    letter-spacing: 0.2em;
     line-height:1.2em;
@@ -91,7 +93,7 @@ header {
 
 .dots {
     text-align: center;
-    padding: 10px 0;
+    padding: 2% 0;
 }
 
 .dot {
@@ -260,6 +262,7 @@ header {
 /*メッセージ 親要素*/
 .message {
     overflow: hidden;
+    height: inherit;
     width: 100vw;
     background-color: #EFA8A8;
 }
@@ -528,13 +531,10 @@ header {
     background-color: #EFA8A8;
     overflow: hidden;
 }
-/*
-.title-sort {
- font-size: 36px;
-}/*
+
 
 /*生食用のボックス*/
-.sort-box-01 {
+.sort-box-01, .sort-box-02 {
     display: flex; 
      width: 100%;
      scrollbar-width: none;
@@ -546,6 +546,7 @@ header {
      color: #D50E0E;
      justify-content: center;
 }
+
 
 /*全体の親要素*/
 .sort-000 {
@@ -687,10 +688,11 @@ header {
 }
 .recipe-box {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
-   align-items: center;
-   column-gap: 30px;
-   margin-top: 80px;
+   column-gap: 5vw;
+   row-gap: 10vh;
+   margin: 1%;
    
 }
 .recipe-box-0 {
@@ -788,13 +790,9 @@ background-position: center center;
     bottom: 20px;
     left: 250px;
     display: flex;
-    flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    padding:10px;
-    padding:0;
     text-decoration: none;
-    text-align: center;
 }
 
 .recipe-6 a:hover {
@@ -807,24 +805,32 @@ background-position: center center;
     transform: translateY(5px);
 }
 .footer {
-    height: 100vh;
+    width: 100%;
     background-color:#EFA8A8;
-    position: relative;
+    border-radius: 10% 10% 0 0;
 }
-.footer h1{
-    position: absolute;
-    z-index: 8;
-    top: 200px;
-    left:850px ;
-    font-size: 48px;
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.footer h1 {
+    font-size: 2.3em;
     font-family: "Cherry Bomb One", system-ui;
     color: #FFF1F1;
-    text-shadow:5px 4px 1px #310B0B;
+    -webkit-text-stroke: 1px #ef2929;
+    padding:15%;
 }
+
+
 .footer-box {
-    height:100vh;
-    width: 100vw;
-    background-image: url(tomatoes-3480643_1280.png);
+    height: 15em;
+    width: 15em;
+    border-radius: 100%;
+    background-image: url(tomato-1694089_1280.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 
@@ -837,14 +843,12 @@ background-position: center center;
 .tips {
     font-size: 20px;
 }
-    .menu-panel{
-        display:none;
+    .menu-panel {
+        height: fit-content;
     }
-    .menu-panel-sp {
-        display:block;
-    }
+   
 .CSSMarquee p{
-    padding-top:60px;
+  padding: 2%;
 }
     .panel-01,.panel-02,.panel-03 {
                 height: 98vh;
@@ -905,9 +909,43 @@ background-position: center center;
     width: 90vw;
     }
 
+.recipe-000{
+    width:fit-content;
+    margin: auto;
+}
+.title-recipe{
+   margin-bottom: 5%;
+}
+    .recipe-box {
+        flex-direction: column;
+        row-gap: 80px;
+       justify-content: center;
+       margin-top: 60px;
+    }
+    .recipe-6 a{
+        left: 200px;
+    }
+    
+    .footer h1 {
+        left:180px ;
+        font-size: 2em;
+        font-family: "Cherry Bomb One", system-ui;
+        color: #FFF1F1;
+        padding: 0 auto ;
+    }
+}
+
+@media (max-width:1080px) {
     .sort-box-01{
         overflow-x: scroll;
+        background-color: #FFF1F1;
     }
+    .sort-box-02{
+        overflow-x: scroll;
+        background-color: #FFF1F1;
+        b
+    }
+
     .sort-1,.sort-2,.sort-3,.sort-4,.sort-6,.sort-7,.sort-8,.sort-9,.sort-10 {
         width: 280px;
     }
@@ -922,7 +960,7 @@ background-position: center center;
     padding:0;
 }
 
-.sort-box-01{
+.sort-box-01, .sort-box-02{
  width:100%;
  overflow: scroll;
  justify-content: unset;
@@ -937,24 +975,4 @@ background-position: center center;
      padding-left: 15px;
 }
 
-.recipe-000{
-    width:auto;
-}
-
-    .recipe-box {
-        flex-direction: column;
-        row-gap: 80px;
-       justify-content: center;
-       margin-top: 60px;
-    }
-    .recipe-6{
-        left: 60vw;
-    }
-    .footer h1 {
-        left:180px ;
-        font-size: 28px;
-        font-family: "Cherry Bomb One", system-ui;
-        color: #FFF1F1;
-        text-shadow:5px 4px 1px #310B0B;
-    }
 }
