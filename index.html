@@ -40,82 +40,33 @@
                     <h1 class="tips">食べ合わせは無限大！<br>食べれるレシピを見つけよう！</h1>
                 </div>
             </div>
+            <div class="tips-box-1">
+                <h1 class="number">04</h1>
+                <div class="inside-box">
+                    <div class="img-4"></div>
+                    <h1 class="tips">油と加熱でリコピン3倍！<br>トマトは加熱して食べるべし！</h1>
+                </div>
+            </div>
+            <div class="tips-box-1">
+                <h1 class="number">05</h1>
+                <div class="inside-box">
+                    <div class="img-5"></div>
+                    <h1 class="tips">ただの彩りだけじゃない？<br>ミニは大玉より栄養が高い！</h1>
+                </div>
+            </div>
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
         </div>
         <div class="cercle-big"></div>
         <div class="cercle-small"></div>
         <div class="cercle-mid"></div>
     </header>
     <script src="script.js"></script>
-    <style type="text/css">
-        
-        .CSSMarquee {
-            max-width:100vw;
-            padding: 1%;
-            margin: 0 ;
-            position: relative;
-            overflow: hidden;
-            font-size: 24px;
-            /*border-top: 1px solid #D50E0E;
-            border-bottom: 1px solid #D50E0E;*/
-            color:#D50E0E;
-            font-weight: bold;
-        }
-        .CSSMarquee p:after {
-            content: "";
-            white-space: nowrap;
-        }
-        .CSSMarquee p {
-            margin: 0;
-            padding-left: 100%;
-            display: inline-block;
-            white-space: nowrap;
-            -webkit-animation-name:marqueeRL;
-            -webkit-animation-timing-function:linear;
-            -webkit-animation-duration:20s;
-            -webkit-animation-iteration-count:infinite;
-            -moz-animation-name:marqueeRL;
-            -moz-animation-timing-function:linear;
-            -moz-animation-duration:20s;
-            -moz-animation-iteration-count:infinite;
-            -ms-animation-name:marqueeRL;
-            -ms-animation-timing-function:linear;
-            -ms-animation-duration:20s;
-            -ms-animation-iteration-count:infinite;
-            -o-animation-name:marqueeRL;
-            -o-animation-timing-function:linear;
-            -o-animation-duration:20s;
-            -o-animation-iteration-count:infinite;
-            animation-name:marqueeRL;
-            animation-timing-function:linear;
-            animation-duration:20s;
-            animation-iteration-count:infinite;
-            animation-play-state: running;
-            animation: marqueeRL 20s linear infinite;
-        }
-
-        @-webkit-keyframes marqueeRL {
-            from {-webkit-transform:translate(0);} to{-o-transform:translate(50%);}to {-webkit-transform:translate(-100%);}
-        }
-
-        @-moz-keyframes marqueeRL {
-            from {-moz-transform:translate(0);} to {-o-transform:translate(50%);} to {-moz-transform:translate(-100%);}
-        }
-        @-ms-keyframes marqueeRL {
-            from {-ms-transform:translate(0);} to {-o-transform:translate(50%);} to {-ms-transform:translate(-100%);}
-        }
-        @-o-keyframes marqueeRL {
-            from {-o-transform:translate(0);} to {-o-transform:translate(50%);} to {-o-transform:translate(-100%);}
-        }
-        @keyframes marqueeRL {
-            from {transform:translate(0);} to {-o-transform:translate(50%);} to {transform:translate(-100%);}
-        }
-        
-        </style>
 
     <section class="menu-panel">
     
@@ -166,10 +117,9 @@
     </section>
 
     <section class="message" id="message-btn">
-        
       <div class="title-message"><h1>メッセージ</h1></div>
       <div class="CSSMarquee"><p>栄養難民はトマトたべ！　　　一緒に医者を青くしよう！　　もうトマト食ってりゃええねん！ 　一緒に可愛くなっちゃおう！</p>
-      </div>
+      </div>  
         <div class="wrapper">
             <div class="item1">
                 <h1>日頃の食事で「栄養満点」って難しい。<br>
@@ -508,9 +458,14 @@
         <h1>Let'eat! <br>
             Let's be cute!
          </h1>
-    <div class="footer-container">
-       <div class="footer-box"></div>
-    </div>
+   
+         <a href="#top" class="footer-btn">
+        <div class="footer-container">
+             <div class="footer-box"></div>
+              ↙️topへ戻る 
+            </div>
+        </a> 
+      
     </section>
 
 </body>
